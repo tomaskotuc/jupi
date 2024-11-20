@@ -17,4 +17,14 @@ class Main extends BaseController
     {
         echo view("karty");
     }
+    
+    public function tabulka() 
+    {
+        echo view("tabulka");
+    }
+    
+    public function carousel() 
+    {
+        echo view("carousel");
+    }
 }
