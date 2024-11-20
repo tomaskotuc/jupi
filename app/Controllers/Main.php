@@ -22,9 +22,13 @@ class Main extends BaseController
     {
         echo view("tabulka");
     }
-    
+
     public function carousel() 
     {
         echo view("carousel");
+    }
+    public function ukol() 
+    {
+        echo view("ukol");
     }
 }
