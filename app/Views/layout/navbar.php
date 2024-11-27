@@ -18,7 +18,7 @@
                         <a class="nav-link" href="<?= base_url('tabulka') ?>">Tabulka</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('ukol') ?>">Úkol</a>
+                        <a class="nav-link" href="<?= base_url('polaci') ?>">Úkol</a>
                     </li>
                 </ul>
             </div>
