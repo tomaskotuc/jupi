@@ -1,15 +1,15 @@
 <?php
-
+ // vytvořeno pomocí php spark make:model Hraci
 namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Data extends Model
+class Hraci extends Model
 {
-    protected $table            = 'datas';
+    protected $table            = 'hraci'; //oddělat s musíš
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'object'; // nastavit hodnotu na object
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [];
