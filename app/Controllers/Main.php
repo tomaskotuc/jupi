@@ -41,9 +41,15 @@ class Main extends BaseController
         //echo view("polaci");
         
          
-        $polaci = $this->hraci->where("country","pl")->findAll(); // where je klíčové slovo v sql vyjadřující podmínku, country je sloupec ve kterém hledáme, a pl znamená co konkrétně hledáme(poláky rn, 2. světová type shit)
+        $polaci = $this->hraci->where("country","pl")->orderBy("vyska", "desc")->findAll(); // jetě to seřadí podle výšky.  where je klíčové slovo v sql vyjadřující podmínku, country je sloupec ve kterém hledáme, a pl znamená co konkrétně hledáme(poláky rn, 2. světová type shit)
         $data ["hraci"] = $polaci;  // něco to dělá
         echo view("polaci", $data);                       //výsledek posíláme do view poláci´, 
     }                                                              // poláci znamená proměnná, do kterého se ten výsledek bude ukládat
+                 // funguje to, tudíž vše je v pořádku a nevadí, že nic nechápu :); 
 
-}
+    public function polaci2() {
+            $polaci = $this->hraci->where("country","pl")->orderBy("vyska", "desc")->findAll(); // jetě to seřadí podle výšky.  where je klíčové slovo v sql vyjadřující podmínku, country je sloupec ve kterém hledáme, a pl znamená co konkrétně hledáme(poláky rn, 2. světová type shit)
+            $data ["hraci"] = $polaci;  // něco to dělá
+            echo view("polaci2", $data);
+    }
+                }
